@@ -42,13 +42,19 @@
   - [x] Release telepítőcsomagok (`releases/MapyNav-v1.0.0.apk`, `releases/MapyNav-v1.0.0.zab`) előállítása és GitHub Actions workflow (`.github/workflows/release.yml`) → ellenőrzés: Fájlok léteznek és érvényesek
   - [x] Zepp OS 512x512 app ikon generálása a 248 px build figyelmeztetés megszüntetésére → ellenőrzés: `npm run build` warning nélkül lefutott, automatikus átméretezés 248/124/80 méretre sikeres
 
+- [x] 9. Kétnyelvű dokumentáció és CI Release publikálás
+  - [x] Átfogó kétnyelvű (angol és magyar) `README.md` létrehozása a követelményekkel, architektúrával és build lépésekkel → ellenőrzés: Fájl mentve és ellenőrizve
+  - [x] GitHub Actions release munkafolyamat (`.github/workflows/release.yml`) javítása (workspace abszolút útvonalak, npm lockfile szinkron) → ellenőrzés: CI lefutott zölden
+  - [x] GitHub Release v1.0.0 közzététele binárisokkal (`MapyNav-v1.0.0.apk` és `MapyNav-v1.0.0.zab`) → ellenőrzés: GitHub Release éles és letölthető
+
 ---
 
 ## Review
+- GitHub Release v1.0.0: https://github.com/kaszast/mapynav-amazfit/releases/tag/v1.0.0
 - Rendszerspecifikáció: `docs/SPECIFICATION.md`
-- Teljes projekt dokumentáció és beállítási útmutató: `README.md`
-- Android APK: `releases/MapyNav-v1.0.0.apk` és `android/app/build/outputs/apk/debug/app-debug.apk`
-- Zepp OS Universal Round ZAB csomag: `releases/MapyNav-v1.0.0.zab` (782 KB, 8 hardvercsalád, 30 óratípus)
+- Kétnyelvű projekt dokumentáció: `README.md`
+- Android APK: `releases/MapyNav-v1.0.0.apk` (18.7 MB)
+- Zepp OS Universal Round ZAB csomag: `releases/MapyNav-v1.0.0.zab` (782 KB, 30 kerek Amazfit típus, 75 platform)
 - Biztonsági mentés pont: Git commit `93de18b` és `/home/maci/androidstudio projects/MapyNav-Amazfit_zeppos_balance_backup/`
 
 
