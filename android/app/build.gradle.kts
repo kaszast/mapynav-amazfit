@@ -11,25 +11,30 @@ android {
     applicationId = "hu.maci.mapynav"
     minSdk = 26
     targetSdk = 36
-    versionCode = 5
-    versionName = "1.0.2"
+    versionCode = 6
+    versionName = "1.0.3"
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
 
   signingConfigs {
     create("release") {
-      storeFile = file("release.jks")
-      storePassword = "mapynav123"
-      keyAlias = "mapynav"
-      keyPassword = "mapynav123"
+      val keyFile = file("release.jks")
+      if (keyFile.exists()) {
+        storeFile = keyFile
+        storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "mapynav123"
+        keyAlias = System.getenv("KEY_ALIAS") ?: "mapynav"
+        keyPassword = System.getenv("KEY_PASSWORD") ?: "mapynav123"
+      }
     }
   }
 
   buildTypes {
     release {
       isMinifyEnabled = false
-      signingConfig = signingConfigs.getByName("release")
+      if (file("release.jks").exists()) {
+        signingConfig = signingConfigs.getByName("release")
+      }
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
     }
     debug {

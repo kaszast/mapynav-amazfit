@@ -15,3 +15,7 @@ zeppos/dist/
 .DS_Store
 *.swp
 *.bak
+
+# Keystores & Secrets
+*.jks
+*.keystore
