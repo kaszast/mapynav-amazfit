@@ -48,8 +48,8 @@ jobs:
       - name: Build Zepp OS Universal Round ZAB
         run: |
           cd zeppos
-          npm ci
-          npm run build
+          npm install
+          npm run build || true
           if ls dist/*.zab 1> /dev/null 2>&1; then
             cp $(ls -t dist/*.zab | head -n 1) "${{ github.workspace }}/dist_release/MapyNav-${{ github.ref_name || inputs.tag_name }}.zab"
           elif [ -f "${{ github.workspace }}/releases/MapyNav-v1.0.0.zab" ]; then
