@@ -54,6 +54,14 @@
   - [x] Angol nyelvű Adatvédelmi nyilatkozat (`docs/PRIVACY_POLICY.md`) → ellenőrzés: Dokumentum elkészült
   - [x] Angol nyelvű rövid és részletes leírás, reviewer tesztelési útmutató (`docs/STORE_LISTING.md`) → ellenőrzés: Dokumentum elkészült
 
+- [x] 11. Google Play Console felkészítés és Release csomagolás
+  - [x] Android mipmap launcher ikonok generálása a Mapy.com logóból (`ic_launcher`, `ic_launcher_round`) → ellenőrzés: 5 felbontás előállítva
+  - [x] Aláíró kulcstár (`release.jks`) létrehozása és `signingConfigs` beállítása a `build.gradle.kts`-ben → ellenőrzés: Keystore generálva
+  - [x] Aláírt Android App Bundle (`MapyNav-v1.0.0.aab`, 12.3 MB) sikeres fordítása (`bundleRelease`) → ellenőrzés: AAB fájl elkészült
+  - [x] Kötelező 1024×500 px Feature Graphic generálása (`feature_graphic_1024x500.png`) → ellenőrzés: Grafika elkészült
+  - [x] Google Play Store Listing dokumentáció (`docs/GOOGLE_PLAY_LISTING.md`) leírásokkal, jogosultsági és adatbiztonsági nyilatkozatokkal → ellenőrzés: Útmutató kész
+  - [x] GitHub Actions workflow frissítése `.aab` automatikus fordítással és feltöltéssel → ellenőrzés: Workflow frissítve
+
 ---
 
 ## Review
@@ -61,10 +69,11 @@
 - Rendszerspecifikáció: `docs/SPECIFICATION.md`
 - Kétnyelvű projekt dokumentáció: `README.md`
 - Zepp Store Listing anyagok és leírás: `docs/STORE_LISTING.md`
+- Google Play Store Listing útmutató: `docs/GOOGLE_PLAY_LISTING.md`
 - Adatvédelmi nyilatkozat: `docs/PRIVACY_POLICY.md`
-- Zepp Store képernyőképek és ikon: `store_assets/`
-- Android APK: `releases/MapyNav-v1.0.0.apk` (18.7 MB)
+- Google Play feltöltési csomag (AAB): `store_assets/google_play/MapyNav-v1.0.0.aab` (12.3 MB)
 - Zepp OS Universal Round ZAB csomag (AppID 1129966): `releases/MapyNav-v1.0.0.zab` (1.15 MB, 30 kerek Amazfit típus, 75 platform)
+- Android APK: `releases/MapyNav-v1.0.0.apk` (18.7 MB)
 - Biztonsági mentés pont: Git commit `93de18b` és `/home/maci/androidstudio projects/MapyNav-Amazfit_zeppos_balance_backup/`
 
 
