@@ -37,14 +37,18 @@
   - [x] Dinamikus layout (`getLayout()`, valós képernyőméret lekérdezés, méretezési skálázás 360-tól 480 px-ig) → ellenőrzés: Kerek kijelző arányok és margók adaptívak
   - [x] Univerzális `.zab` csomagolás (`zeus build`) és Android feliratok általánosítása → ellenőrzés: `.zab` build sikeres, Android unit tesztek zöldek
 
+- [x] 8. Verziószám és Release automatizáció
+  - [x] Verziószám (`v1.0.0`) elhelyezése az Android fejlécben a MapyNav cím mellett kisebb betűmérettel → ellenőrzés: Képernyőkép és layout ellenőrizve
+  - [x] Release telepítőcsomagok (`releases/MapyNav-v1.0.0.apk`, `releases/MapyNav-v1.0.0.zab`) előállítása és GitHub Actions workflow (`.github/workflows/release.yml`) → ellenőrzés: Fájlok léteznek és érvényesek
+  - [x] Zepp OS 512x512 app ikon generálása a 248 px build figyelmeztetés megszüntetésére → ellenőrzés: `npm run build` warning nélkül lefutott, automatikus átméretezés 248/124/80 méretre sikeres
+
 ---
 
 ## Review
 - Rendszerspecifikáció: `docs/SPECIFICATION.md`
 - Teljes projekt dokumentáció és beállítási útmutató: `README.md`
-- Android APK: `android/app/build/outputs/apk/debug/app-debug.apk` (Telepítve a készülékre)
-- Zepp OS Universal Round ZAB csomag: `zeppos/dist/1058291-MapyNav-1.0.0-*.zab`
-- Zepp OS Mini App forrás: `zeppos/`
+- Android APK: `releases/MapyNav-v1.0.0.apk` és `android/app/build/outputs/apk/debug/app-debug.apk`
+- Zepp OS Universal Round ZAB csomag: `releases/MapyNav-v1.0.0.zab` (782 KB, 8 hardvercsalád, 30 óratípus)
 - Biztonsági mentés pont: Git commit `93de18b` és `/home/maci/androidstudio projects/MapyNav-Amazfit_zeppos_balance_backup/`
 
 
