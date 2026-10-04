@@ -103,7 +103,7 @@ npm install
 npm run build
 
 # Output package location:
-# zeppos/dist/1058291-MapyNav-1.0.0-*.zab
+# zeppos/dist/1129966-MapyNav-1.0.0-*.zab
 ```
 
 ---
@@ -227,7 +227,7 @@ npm install
 npm run build
 
 # Elkészült univerális telepítőcsomag:
-# zeppos/dist/1058291-MapyNav-1.0.0-*.zab
+# zeppos/dist/1129966-MapyNav-1.0.0-*.zab
 ```
 
 ---
