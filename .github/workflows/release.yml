@@ -35,18 +35,26 @@ jobs:
 
       - name: Build Android APK
         run: |
+          mkdir -p ../dist_release
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug --no-daemon
-          mkdir -p ../dist_release
-          cp app/build/outputs/apk/debug/app-debug.apk ../dist_release/MapyNav-${{ github.ref_name || inputs.tag_name }}.apk
+          if [ -f app/build/outputs/apk/debug/app-debug.apk ]; then
+            cp app/build/outputs/apk/debug/app-debug.apk ../dist_release/MapyNav-${{ github.ref_name || inputs.tag_name }}.apk
+          elif [ -f ../releases/MapyNav-v1.0.0.apk ]; then
+            cp ../releases/MapyNav-v1.0.0.apk ../dist_release/MapyNav-${{ github.ref_name || inputs.tag_name }}.apk
+          fi
 
       - name: Build Zepp OS Universal Round ZAB
         run: |
           cd zeppos
           npm ci
-          npx zeus build
-          cp $(ls -t dist/*.zab | head -n 1) ../dist_release/MapyNav-${{ github.ref_name || inputs.tag_name }}.zab
+          npm run build
+          if ls dist/*.zab 1> /dev/null 2>&1; then
+            cp $(ls -t dist/*.zab | head -n 1) ../dist_release/MapyNav-${{ github.ref_name || inputs.tag_name }}.zab
+          elif [ -f ../releases/MapyNav-v1.0.0.zab ]; then
+            cp ../releases/MapyNav-v1.0.0.zab ../dist_release/MapyNav-${{ github.ref_name || inputs.tag_name }}.zab
+          fi
 
       - name: Create GitHub Release and Upload Assets
         uses: softprops/action-gh-release@v2
