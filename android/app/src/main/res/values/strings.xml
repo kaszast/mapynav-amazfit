@@ -1,6 +1,6 @@
 <resources>
   <string name="app_name">MapyNav</string>
-  <string name="header_subtitle">Amazfit Balance Bridge</string>
+  <string name="header_subtitle">Amazfit Smartwatch Bridge</string>
 
   <!-- Language Switcher -->
   <string name="lang_selector_title">Language / Nyelv</string>
@@ -73,7 +73,7 @@
   <!-- Service Strings -->
   <string name="service_name">Mapy.cz Notification Listener Service</string>
   <string name="fgs_channel_name">MapyNav Background Service</string>
-  <string name="fgs_channel_desc">Persistent background link with Amazfit Balance watch</string>
-  <string name="fgs_running_desc">Background service running • Connected to watch</string>
-  <string name="fgs_idle_desc">Standby • Amazfit Balance connection active</string>
+  <string name="fgs_channel_desc">Persistent background link with Amazfit watch</string>
+  <string name="fgs_running_desc">Background service running • Connected to Amazfit</string>
+  <string name="fgs_idle_desc">Standby • Amazfit connection active</string>
 </resources>

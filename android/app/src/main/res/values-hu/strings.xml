@@ -1,6 +1,6 @@
 <resources>
   <string name="app_name">MapyNav</string>
-  <string name="header_subtitle">Amazfit Balance Híd</string>
+  <string name="header_subtitle">Amazfit Okosóra Híd</string>
 
   <!-- Language Switcher -->
   <string name="lang_selector_title">Nyelv / Language</string>
@@ -73,7 +73,7 @@
   <!-- Service Strings -->
   <string name="service_name">Mapy.cz Értesítésfigyelő Szolgáltatás</string>
   <string name="fgs_channel_name">MapyNav Háttérszolgáltatás</string>
-  <string name="fgs_channel_desc">Folyamatos háttérkapcsolat az Amazfit Balance órával</string>
-  <string name="fgs_running_desc">Háttérszolgáltatás fut • Kapcsolódva az órához</string>
-  <string name="fgs_idle_desc">Készenlét • Amazfit Balance kapcsolat aktív</string>
+  <string name="fgs_channel_desc">Folyamatos háttérkapcsolat az Amazfit órával</string>
+  <string name="fgs_running_desc">Háttérszolgáltatás fut • Kapcsolódva az Amazfithez</string>
+  <string name="fgs_idle_desc">Készenlét • Amazfit kapcsolat aktív</string>
 </resources>

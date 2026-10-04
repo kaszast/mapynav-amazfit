@@ -31,7 +31,11 @@
   - [x] Window Insets / Status Bar padding javítása (Scaffold, TopAppBar, enableEdgeToEdge) → ellenőrzés: Safe areák és státuszbár insets kezelve
   - [x] Dashboard és Kártyastruktúra harmonizálása (Rendszerállapot összefogása, INACTIVE sortörés javítása) → ellenőrzés: Letisztult állapot-sorok, levágásmentes badge
   - [x] Teszt szimulátor grid és Live HUD áttervezése → ellenőrzés: 2 oszlopos rendezett gombok, szép HUD
-  - [x] Build, telepítés és képernyőkép-verifikáció az eszközön → ellenőrzés: Képernyőképekkel és tesztekkel verifikálva
+- [x] 7. Univerzális kerek Amazfit támogatás
+  - [x] Biztonsági mentés elkészítése (Git commit `93de18b` + fizikai `MapyNav-Amazfit_zeppos_balance_backup` könyvtár) → ellenőrzés: Visszaállítási pont rögzítve
+  - [x] Zepp OS v3 univerzális round target (`st: "r"`, API 2.0-3.0+) konfigurálása az `app.json`-ban → ellenőrzés: 30 kerek Amazfit típus, 75 platform lefedve
+  - [x] Dinamikus layout (`getLayout()`, valós képernyőméret lekérdezés, méretezési skálázás 360-tól 480 px-ig) → ellenőrzés: Kerek kijelző arányok és margók adaptívak
+  - [x] Univerzális `.zab` csomagolás (`zeus build`) és Android feliratok általánosítása → ellenőrzés: `.zab` build sikeres, Android unit tesztek zöldek
 
 ---
 
@@ -39,5 +43,8 @@
 - Rendszerspecifikáció: `docs/SPECIFICATION.md`
 - Teljes projekt dokumentáció és beállítási útmutató: `README.md`
 - Android APK: `android/app/build/outputs/apk/debug/app-debug.apk` (Telepítve a készülékre)
+- Zepp OS Universal Round ZAB csomag: `zeppos/dist/1058291-MapyNav-1.0.0-*.zab`
 - Zepp OS Mini App forrás: `zeppos/`
+- Biztonsági mentés pont: Git commit `93de18b` és `/home/maci/androidstudio projects/MapyNav-Amazfit_zeppos_balance_backup/`
+
 

@@ -1,5 +1,6 @@
 import { BasePage } from '@zeppos/zml/base-page'
 import * as hmUI from '@zos/ui'
+import { getDeviceInfo } from '@zos/device'
 import {
   Vibrator,
   Buzzer,
@@ -36,7 +37,7 @@ Page(
     clockTimer: null,
 
     build() {
-      console.log('MapyNav Giant HUD Page build')
+      console.log('MapyNav Universal Round HUD Page build')
 
       this.initDisplayManagement()
       this.initSensors()
@@ -66,7 +67,7 @@ Page(
         this.vibrator = null
       }
 
-      // Buzzer / Speaker Sensor
+      // Buzzer / Speaker Sensor (available on watches with speaker)
       try {
         this.buzzer = new Buzzer()
       } catch (e) {
@@ -83,51 +84,107 @@ Page(
       }
     },
 
-    initUI() {
-      // 480x480 AMOLED Screen Layout - Giant High-Visibility Elements
+    getLayout() {
+      let width = 480
+      let height = 480
+      try {
+        if (typeof getDeviceInfo === 'function') {
+          const info = getDeviceInfo()
+          if (info && info.width) {
+            width = info.width
+            height = info.height || info.width
+          }
+        }
+      } catch (_) {}
 
-      // 1. Giant Turn Icon (210x210 px, centered at X: 135, Y: 10..220)
+      if (width === 480 && typeof hmSetting !== 'undefined' && hmSetting.getDeviceInfo) {
+        try {
+          const info = hmSetting.getDeviceInfo()
+          if (info && info.width) {
+            width = info.width
+            height = info.height || info.width
+          }
+        } catch (_) {}
+      }
+
+      const scale = width / 480.0
+
+      const iconSize = Math.round(210 * scale)
+      const iconX = Math.round((width - iconSize) / 2)
+      const iconY = Math.round(10 * scale)
+
+      const distY = Math.round(224 * scale)
+      const distH = Math.round(74 * scale)
+      const distSize = Math.max(36, Math.round(72 * scale))
+      const distPad = Math.round(10 * scale)
+
+      const streetY = Math.round(302 * scale)
+      const streetH = Math.round(62 * scale)
+      const streetSize = Math.max(20, Math.round(32 * scale))
+      const streetPad = Math.round(20 * scale)
+
+      const clockY = Math.round(368 * scale)
+      const clockH = Math.round(76 * scale)
+      const clockSize = Math.max(36, Math.round(72 * scale))
+      const clockPad = Math.round(10 * scale)
+
+      return {
+        width,
+        height,
+        scale,
+        icon: { x: iconX, y: iconY, w: iconSize, h: iconSize },
+        dist: { x: distPad, y: distY, w: width - 2 * distPad, h: distH, textSize: distSize },
+        street: { x: streetPad, y: streetY, w: width - 2 * streetPad, h: streetH, textSize: streetSize },
+        clock: { x: clockPad, y: clockY, w: width - 2 * clockPad, h: clockH, textSize: clockSize }
+      }
+    },
+
+    initUI() {
+      const layout = this.getLayout()
+      console.log(`MapyNav HUD UI init: ${layout.width}x${layout.height} (scale: ${layout.scale.toFixed(2)})`)
+
+      // 1. Giant Turn Icon (centered)
       this.iconWidget = hmUI.createWidget(hmUI.widget.IMG, {
-        x: 135,
-        y: 10,
-        w: 210,
-        h: 210,
+        x: layout.icon.x,
+        y: layout.icon.y,
+        w: layout.icon.w,
+        h: layout.icon.h,
         src: 'unknown.png'
       })
 
-      // 2. Giant Distance Text (72 px Bold White, Y: 224..298)
+      // 2. Giant Distance Text (Bold White)
       this.distanceWidget = hmUI.createWidget(hmUI.widget.TEXT, {
-        x: 10,
-        y: 224,
-        w: 460,
-        h: 74,
+        x: layout.dist.x,
+        y: layout.dist.y,
+        w: layout.dist.w,
+        h: layout.dist.h,
         color: 0xFFFFFF,
-        text_size: 72,
+        text_size: layout.dist.textSize,
         align_h: hmUI.align.CENTER_H,
         text: 'Készenlét'
       })
 
-      // 3. Street Name / Maneuver (32 px Bold Amber, Y: 302..364)
+      // 3. Street Name / Maneuver (Bold Amber)
       this.streetWidget = hmUI.createWidget(hmUI.widget.TEXT, {
-        x: 20,
-        y: 302,
-        w: 440,
-        h: 62,
-        color: 0xFACC15, // Bright Amber
-        text_size: 32,
+        x: layout.street.x,
+        y: layout.street.y,
+        w: layout.street.w,
+        h: layout.street.h,
+        color: 0xFACC15,
+        text_size: layout.street.textSize,
         align_h: hmUI.align.CENTER_H,
         text_style: hmUI.text_style.WRAP,
         text: 'Indíts útvonalat'
       })
 
-      // 4. Exact Clock Time at Bottom (72 px Bold White, Y: 368..444)
+      // 4. Exact Clock Time at Bottom (Bold White)
       this.clockWidget = hmUI.createWidget(hmUI.widget.TEXT, {
-        x: 10,
-        y: 368,
-        w: 460,
-        h: 76,
+        x: layout.clock.x,
+        y: layout.clock.y,
+        w: layout.clock.w,
+        h: layout.clock.h,
         color: 0xFFFFFF,
-        text_size: 72,
+        text_size: layout.clock.textSize,
         align_h: hmUI.align.CENTER_H,
         text: '--:--'
       })
@@ -190,14 +247,14 @@ Page(
       const iconFile = ICON_MAP[data.iconKey] || 'unknown.png'
       this.iconWidget.setProperty(hmUI.prop.MORE, { src: iconFile })
 
-      // 2. Giant Distance Number (72 px)
+      // 2. Giant Distance Number
       const dist = data.distance || (data.distanceMeters > 0 ? `${data.distanceMeters} m` : '0 m')
       this.distanceWidget.setProperty(hmUI.prop.MORE, {
         text: dist,
         color: 0xFFFFFF
       })
 
-      // 3. Big Street / Maneuver Name (40 px)
+      // 3. Big Street / Maneuver Name
       let label = data.street
       if (!label || label.trim() === '') {
         label = data.directionText || data.action || ''

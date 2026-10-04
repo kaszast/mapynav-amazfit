@@ -1,0 +1,61 @@
+name: Build & Publish Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Release Tag (pl. v1.0.0)'
+        required: true
+        default: 'v1.0.0'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build Android APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+          mkdir -p ../dist_release
+          cp app/build/outputs/apk/debug/app-debug.apk ../dist_release/MapyNav-${{ github.ref_name || inputs.tag_name }}.apk
+
+      - name: Build Zepp OS Universal Round ZAB
+        run: |
+          cd zeppos
+          npm ci
+          npx zeus build
+          cp $(ls -t dist/*.zab | head -n 1) ../dist_release/MapyNav-${{ github.ref_name || inputs.tag_name }}.zab
+
+      - name: Create GitHub Release and Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name || inputs.tag_name }}
+          name: Release ${{ github.ref_name || inputs.tag_name }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            dist_release/MapyNav-*.apk
+            dist_release/MapyNav-*.zab

@@ -1,14 +1,16 @@
 {
-  "name": "mapynav-amazfit-balance",
+  "name": "mapynav-amazfit",
   "version": "1.0.0",
-  "description": "Mapy.cz Navigation HUD for Amazfit Balance",
+  "description": "Mapy.cz Navigation HUD for Amazfit Smartwatches",
   "main": "app.js",
   "scripts": {
-    "build": "zeus build --target monaco",
+    "build": "zeus build",
     "build:balance": "zeus build --target monaco",
     "build:balance2": "zeus build --target lyon",
-    "preview": "zeus preview --target monaco",
-    "preview:balance2": "zeus preview --target lyon"
+    "preview": "zeus preview",
+    "preview:balance": "zeus preview --target monaco",
+    "preview:gtr4": "zeus preview --target berlin",
+    "preview:trex3": "zeus preview --target matterhorn"
   },
   "author": "maci",
   "license": "MIT",

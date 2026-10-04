@@ -71,6 +71,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hu.maci.mapynav.BuildConfig
 import hu.maci.mapynav.R
 import hu.maci.mapynav.model.ManeuverType
 import hu.maci.mapynav.model.NavState
@@ -177,13 +178,31 @@ fun NavTopBar(
         }
         Spacer(modifier = Modifier.width(12.dp))
         Column {
-          Text(
-            text = stringResource(R.string.app_name),
-            fontSize = 17.sp,
-            fontWeight = FontWeight.Bold,
-            color = TextLight,
-            maxLines = 1
-          )
+          Row(
+            verticalAlignment = Alignment.CenterVertically
+          ) {
+            Text(
+              text = stringResource(R.string.app_name),
+              fontSize = 17.sp,
+              fontWeight = FontWeight.Bold,
+              color = TextLight,
+              maxLines = 1
+            )
+            Spacer(modifier = Modifier.width(6.dp))
+            Surface(
+              shape = RoundedCornerShape(4.dp),
+              color = GreenMapy.copy(alpha = 0.15f),
+              border = BorderStroke(1.dp, GreenMapy.copy(alpha = 0.3f))
+            ) {
+              Text(
+                text = "v${BuildConfig.VERSION_NAME}",
+                fontSize = 10.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = GreenMapy,
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp)
+              )
+            }
+          }
           Text(
             text = stringResource(R.string.header_subtitle),
             fontSize = 11.sp,
