@@ -1,0 +1,17 @@
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+android/.idea/
+android/*.iml
+android/local.properties
+
+# Zepp OS
+zeppos/node_modules/
+zeppos/dist/
+
+# IDE & OS
+.idea/
+.DS_Store
+*.swp
+*.bak

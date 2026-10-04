@@ -1,0 +1,79 @@
+<resources>
+  <string name="app_name">MapyNav</string>
+  <string name="header_subtitle">Amazfit Balance Híd</string>
+
+  <!-- Language Switcher -->
+  <string name="lang_selector_title">Nyelv / Language</string>
+  <string name="lang_system">Rendszer alapértelmezett</string>
+  <string name="lang_en">English</string>
+  <string name="lang_hu">Magyar</string>
+
+  <!-- Permissions -->
+  <string name="perm_listener_granted">Értesítés-hozzáférés engedélyezve</string>
+  <string name="perm_listener_required">Értesítés-hozzáférés szükséges</string>
+  <string name="perm_listener_desc">A Mapy.cz navigációs értesítéseinek eléréséhez kérjük, engedélyezd az értesítés-olvasást a rendszerbeállításokban.</string>
+  <string name="btn_grant_permission">Engedély Megadása</string>
+
+  <!-- Background & Battery -->
+  <string name="card_bg_battery_title">Háttérben futás &amp; Akkumulátor</string>
+  <string name="fgs_status_running">Háttérszolgáltatás fut (Folyamatos kapcsolat)</string>
+  <string name="fgs_status_starting">Háttérszolgáltatás indítása folyamatban...</string>
+  <string name="battery_opt_exempt">Akkumulátorkímélő: Nincs korlátozás (Védve)</string>
+  <string name="battery_opt_active">Akkumulátorkímélő korlátozás aktív!</string>
+  <string name="battery_opt_desc">A telefon kikapcsolt képernyőnél leállíthatja a kapcsolatot az órával. Kérjük, kapcsold ki az akkumulátor-optimalizálást:</string>
+  <string name="btn_disable_battery_opt">Akkumulátorkímélő Kikapcsolása</string>
+  <string name="btn_xiaomi_settings">HyperOS Autostart Beállítások</string>
+
+  <!-- System Status -->
+  <string name="card_system_bridge_title">Rendszer &amp; Óra Kapcsolat</string>
+  <string name="card_server_title">Rendszer Állapot</string>
+  <string name="server_url_label">Helyi HTTP szerver: 127.0.0.1:8088</string>
+  <string name="watch_last_query">Utolsó lekérdezés: %s</string>
+  <string name="watch_no_query">Még nem érkezett lekérdezés</string>
+  <string name="status_notification_access">Értesítés-hozzáférés</string>
+  <string name="status_bg_service">Háttérszolgáltatás</string>
+  <string name="status_battery_saver">Akkumulátor védelem</string>
+  <string name="status_server_endpoint">Helyi óra végpont</string>
+  <string name="status_connected">Kapcsolódva</string>
+  <string name="status_ready">Aktív</string>
+  <string name="status_waiting">Készenlétben</string>
+  <string name="status_unrestricted">Korlátlan</string>
+  <string name="status_restricted">Korlátozott</string>
+  <string name="status_granted">Engedélyezve</string>
+  <string name="status_missing">Szükséges</string>
+  <string name="hud_standby_title">Navigáció Készenlétben</string>
+  <string name="action_fix">Javítás</string>
+  <string name="action_settings">Beállítások</string>
+
+  <!-- Live HUD -->
+  <string name="card_hud_title">Élő Navigáció</string>
+  <string name="badge_active">AKTÍV</string>
+  <string name="badge_inactive">INAKTÍV</string>
+  <string name="hud_next_street">Következő utca: %s</string>
+  <string name="hud_roundabout_exit">Körforgalom kijárat: %d.</string>
+  <string name="hud_eta_prefix">ETA: %1$s %2$s</string>
+  <string name="hud_idle_desc">Nincs aktív Mapy.cz navigáció.\nIndíts el egy útvonalat a Mapy.cz alkalmazásban, vagy használd az alábbi tesztelőt az óra kapcsolat ellenőrzéséhez.</string>
+
+  <!-- Simulator Buttons -->
+  <string name="card_simulator_title">Teszt Szimulátor (Óra ellenőrzéséhez)</string>
+  <string name="card_simulator_desc">Kattints egy manőverre a csomag azonnali órára küldéséhez:</string>
+  <string name="test_straight">Egyenesen</string>
+  <string name="test_right">Jobbra</string>
+  <string name="test_left">Balra</string>
+  <string name="test_slight_right">Enyhén jobbra</string>
+  <string name="test_slight_left">Enyhén balra</string>
+  <string name="test_sharp_right">Élesen jobbra</string>
+  <string name="test_sharp_left">Élesen balra</string>
+  <string name="test_uturn">Visszafordulás</string>
+  <string name="test_roundabout">Körforgalom</string>
+  <string name="test_destination">Célhoz értél</string>
+  <string name="test_unknown">Ismeretlen</string>
+  <string name="test_stop">Leállítás (Idle)</string>
+
+  <!-- Service Strings -->
+  <string name="service_name">Mapy.cz Értesítésfigyelő Szolgáltatás</string>
+  <string name="fgs_channel_name">MapyNav Háttérszolgáltatás</string>
+  <string name="fgs_channel_desc">Folyamatos háttérkapcsolat az Amazfit Balance órával</string>
+  <string name="fgs_running_desc">Háttérszolgáltatás fut • Kapcsolódva az órához</string>
+  <string name="fgs_idle_desc">Készenlét • Amazfit Balance kapcsolat aktív</string>
+</resources>
