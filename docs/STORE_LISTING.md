@@ -17,32 +17,66 @@ Use these pre-formatted fields when submitting the application on the [Zepp Deve
 
 ---
 
-## 2. Short Summary (Brief Introduction)
+## 2. English Store Listing (Angol szövegek)
 
-> Real-time turn-by-turn navigation HUD and directional haptics for your Amazfit smartwatch.
+### Brief Introduction (Rövid leírás - 75 karakter / max 100)
+```text
+Real-time turn-by-turn navigation HUD and haptics for Amazfit smartwatches.
+```
+
+### Detailed Description (Részletes leírás - 438 karakter)
+```text
+NaviHUD turns your Amazfit smartwatch into a clear navigation Heads-Up Display (HUD).
+
+Features:
+• Crystal-clear turn arrows and exact remaining distance
+• Street names, roundabout exit numbers, and ETA
+• Directional haptic vibration alerts for turns
+• AMOLED battery saver: wakes display only on turn events
+• 100% offline local Bluetooth link, zero data tracking
+
+Requires the free NaviHUD Companion Android app installed on your phone.
+```
+
+### Ultra-compact Description (Ha a mező limit < 250 karakter - 222 karakter)
+```text
+NaviHUD turns your Amazfit smartwatch into a clear navigation HUD.
+• High-contrast turn arrows & remaining distance
+• Street names & roundabout exits
+• Directional vibration alerts
+• 100% offline local Bluetooth connection
+```
 
 ---
 
-## 3. Detailed Description (Full Introduction)
+## 3. Hungarian Store Listing (Magyar szövegek)
 
+### Brief Introduction (Rövid leírás - 69 karakter / max 100)
 ```text
-NaviHUD transforms your Amazfit smartwatch into a clear, glanceable Heads-Up Display (HUD) for navigation.
+Valós idejű navigációs HUD és rezgéses értesítések Amazfit okosórára.
+```
 
-Designed specifically for cyclists, drivers, hikers, and runners, NaviHUD mirrors active turn-by-turn maneuvers directly onto your wrist without needing to look at your phone.
+### Detailed Description (Részletes leírás - 443 karakter)
+```text
+A NaviHUD valós idejű navigációs kijelzővé (HUD) alakítja Amazfit okosórádat.
 
-Key Features:
-• Crystal-Clear AMOLED HUD: High-contrast directional turn arrows, exact remaining distance in meters/kilometers, next street name, roundabout exits, and current clock time.
-• Directional Haptics: Distinct, customizable vibration patterns for left turns, right turns, roundabouts, and arrival so you never miss an exit.
-• Smart Battery Saving: The watch display only wakes and stays bright during active navigation events, preserving battery life during all-day trips.
-• Universal Round Watch Design: Dynamic pixel-perfect scaling optimized for all round Amazfit smartwatches (Zepp OS 2.0+ to 4.x).
-• Complete Privacy: 100% offline local communication over Bluetooth. No location tracking, no analytics, no external servers.
+Főbb funkciók:
+• Nagy kontrasztú kanyarodási nyilak és pontos távolság
+• Utcanevek, körforgalmi kijáratok és érkezési idő
+• Megkülönböztethető rezgésminták kanyaroknál
+• AMOLED akkumulátorkímélő: csak manővereknél ébred
+• 100% offline helyi Bluetooth kapcsolat, nincs adatgyűjtés
 
-Requirements:
-1. Navigation provider installed on your Android smartphone.
-2. Free NaviHUD Companion Android App (downloadable from GitHub Releases).
-3. Notification access granted on the Android companion app.
+Használatához a telefonra telepített ingyenes NaviHUD Android alkalmazás szükséges.
+```
 
-Stay on track with confidence — hands-free and distraction-free!
+### Ultra-compact Description (Ha a mező limit < 250 karakter - 234 karakter)
+```text
+A NaviHUD navigációs kijelzővé (HUD) alakítja Amazfit okosórádat.
+• Nagy kontrasztú kanyarodási nyilak és távolság
+• Utcanevek és körforgalmi kijáratok
+• Megkülönböztethető rezgéses értesítések
+• 100% offline helyi Bluetooth kapcsolat
 ```
 
 ---
