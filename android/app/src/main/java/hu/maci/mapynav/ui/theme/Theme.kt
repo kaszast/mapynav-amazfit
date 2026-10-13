@@ -34,10 +34,13 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 @Composable
-fun MapyNavTheme(content: @Composable () -> Unit) {
+fun NaviHUDTheme(content: @Composable () -> Unit) {
   MaterialTheme(
     colorScheme = DarkColorScheme,
     content = content
   )
 }
+
+@Composable
+fun MapyNavTheme(content: @Composable () -> Unit) = NaviHUDTheme(content)
 

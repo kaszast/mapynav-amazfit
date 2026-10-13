@@ -20,6 +20,6 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "MapyNav"
+rootProject.name = "NaviHUD"
 
 include(":app")

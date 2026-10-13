@@ -1,14 +1,14 @@
-# Privacy Policy for MapyNav
+# Privacy Policy for NaviHUD
 
-**Last updated:** October 4, 2026
+**Last updated:** October 13, 2026
 
-This Privacy Policy applies to the **MapyNav** application suite, which includes the **MapyNav Companion Android App** and the **MapyNav Zepp OS Smartwatch App** (collectively, "the Application").
+This Privacy Policy applies to the **NaviHUD** application suite, which includes the **NaviHUD Companion Android App** and the **NaviHUD Zepp OS Smartwatch App** (collectively, "the Application").
 
 ---
 
 ### 1. Overview and Core Principle
 
-Your privacy is paramount. **MapyNav does not collect, store, transmit, or share any personal data, location data, identity information, or usage analytics with any external servers or third parties.**
+Your privacy is paramount. **NaviHUD does not collect, store, transmit, or share any personal data, location data, identity information, or usage analytics with any external servers or third parties.**
 
 The Application operates as an entirely local, offline bridge designed to display turn-by-turn navigation instructions from **Mapy.com** (Mapy.cz) on your paired **Amazfit** smartwatch.
 

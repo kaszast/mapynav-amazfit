@@ -6,10 +6,10 @@ App(
       navState: null
     },
     onCreate() {
-      console.log('MapyNav Zepp OS App created')
+      console.log('NaviHUD Zepp OS App created')
     },
     onDestroy() {
-      console.log('MapyNav Zepp OS App destroyed')
+      console.log('NaviHUD Zepp OS App destroyed')
     }
   })
 )

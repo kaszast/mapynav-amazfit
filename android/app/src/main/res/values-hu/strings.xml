@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">MapyNav</string>
+  <string name="app_name">NaviHUD</string>
   <string name="header_subtitle">Amazfit Okosóra Híd</string>
 
   <!-- Language Switcher -->
@@ -71,8 +71,8 @@
   <string name="test_stop">Leállítás (Idle)</string>
 
   <!-- Service Strings -->
-  <string name="service_name">Mapy.cz Értesítésfigyelő Szolgáltatás</string>
-  <string name="fgs_channel_name">MapyNav Háttérszolgáltatás</string>
+  <string name="service_name">NaviHUD Értesítésfigyelő Szolgáltatás</string>
+  <string name="fgs_channel_name">NaviHUD Háttérszolgáltatás</string>
   <string name="fgs_channel_desc">Folyamatos háttérkapcsolat az Amazfit órával</string>
   <string name="fgs_running_desc">Háttérszolgáltatás fut • Kapcsolódva az Amazfithez</string>
   <string name="fgs_idle_desc">Készenlét • Amazfit kapcsolat aktív</string>

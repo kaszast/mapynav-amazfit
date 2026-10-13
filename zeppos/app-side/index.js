@@ -3,7 +3,7 @@ import { BaseSideService } from '@zeppos/zml/base-side'
 AppSideService(
   BaseSideService({
     onInit() {
-      console.log('MapyNav AppSideService onInit')
+      console.log('NaviHUD AppSideService onInit')
       this.pollTimer = null
       this.lastStateTimestamp = 0
       this.startPolling()
@@ -19,11 +19,11 @@ AppSideService(
     },
 
     onRun() {
-      console.log('MapyNav AppSideService onRun')
+      console.log('NaviHUD AppSideService onRun')
     },
 
     onDestroy() {
-      console.log('MapyNav AppSideService onDestroy')
+      console.log('NaviHUD AppSideService onDestroy')
       this.stopPolling()
     },
 

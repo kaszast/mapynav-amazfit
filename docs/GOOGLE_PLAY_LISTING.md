@@ -1,12 +1,12 @@
-# Google Play Console Submission Guide for MapyNav
+# Google Play Console Submission Guide for NaviHUD
 
-Use this guide when creating and publishing **MapyNav** on the [Google Play Console](https://play.google.com/console/).
+Use this guide when creating and publishing **NaviHUD** on the [Google Play Console](https://play.google.com/console/).
 
 ---
 
 ## 1. App Basics
 
-* **App Name:** `MapyNav - Amazfit Navigation` *(28 / 30 chars)*
+* **App Name:** `NaviHUD - Amazfit Navigation` *(28 / 30 chars)*
 * **Default Language:** English (United States) — `en-US`
 * **App or Game:** App
 * **Free or Paid:** Free
@@ -18,15 +18,15 @@ Use this guide when creating and publishing **MapyNav** on the [Google Play Cons
 
 ### Short Description *(max 80 characters)*
 ```text
-Real-time Mapy.com navigation HUD and haptics for Amazfit smartwatches.
+Real-time navigation HUD and haptics for Amazfit smartwatches.
 ```
-*(Length: 71 characters)*
+*(Length: 62 characters)*
 
 ### Full Description *(max 4000 characters)*
 ```text
-MapyNav is a lightweight, real-time companion application that bridges navigation instructions from Mapy.com (Mapy.cz) directly to your Amazfit smartwatch (running Zepp OS 2.0+, 3.x, or 4.x).
+NaviHUD is a lightweight, real-time companion application that bridges navigation instructions from your Android smartphone directly to your Amazfit smartwatch (running Zepp OS 2.0+, 3.x, or 4.x).
 
-Whether you are cycling, driving, motorcycling, or hiking, MapyNav keeps your hands free and your eyes on the road by mirroring turn-by-turn maneuvers, remaining distance, next street names, and arrival time right on your wrist.
+Whether you are cycling, driving, motorcycling, or hiking, NaviHUD keeps your hands free and your eyes on the road by mirroring turn-by-turn maneuvers, remaining distance, next street names, and arrival time right on your wrist.
 
 KEY FEATURES:
 • Real-Time Navigation Mirroring: Automatically captures active turn maneuvers, distance countdowns, and roundabout exits from Mapy.com.
@@ -41,9 +41,9 @@ SUPPORTED SMARTWATCHES:
 All circular Amazfit smartwatches running Zepp OS (Amazfit Balance, Balance 2, GTR 4, GTR 3 / 3 Pro, T-Rex 3, T-Rex Ultra, Cheetah, Cheetah Pro, Active Edge, etc.).
 
 HOW TO USE:
-1. Install MapyNav on your phone and grant Notification Access.
-2. Install the free companion MapyNav mini app on your Amazfit smartwatch via the Zepp App Store.
-3. Start navigation in Mapy.com — your watch HUD activates automatically!
+1. Install NaviHUD on your phone and grant Notification Access.
+2. Install the free companion NaviHUD mini app on your Amazfit smartwatch via the Zepp App Store.
+3. Start navigation in your navigation app — your watch HUD activates automatically!
 
 Feedback, suggestions, or support: kaszast@gmail.com
 Source code & documentation: https://github.com/kaszast/mapynav-amazfit

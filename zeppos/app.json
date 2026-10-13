@@ -2,15 +2,15 @@
   "configVersion": "v3",
   "app": {
     "appId": 1129966,
-    "appName": "MapyNav",
+    "appName": "NaviHUD",
     "appType": "app",
     "version": {
-      "code": 1,
-      "name": "1.0.0"
+      "code": 2,
+      "name": "1.0.1"
     },
     "icon": "icon.png",
     "vender": "maci",
-    "description": "Mapy.cz Navigation HUD for Amazfit Smartwatches"
+    "description": "Navigation HUD for Amazfit Smartwatches"
   },
   "permissions": [
     "data:os.device.info",

@@ -20,7 +20,7 @@ import androidx.compose.runtime.setValue
 import androidx.core.content.ContextCompat
 import hu.maci.mapynav.service.MapyForegroundService
 import hu.maci.mapynav.service.MapyNotificationListenerService
-import hu.maci.mapynav.ui.theme.MapyNavTheme
+import hu.maci.mapynav.ui.theme.NaviHUDTheme
 import hu.maci.mapynav.util.LocaleHelper
 
 class MainActivity : ComponentActivity() {
@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
     MapyForegroundService.start(this)
 
     setContent {
-      MapyNavTheme {
+      NaviHUDTheme {
         NavScreen(
           isPermissionGranted = isListenerPermissionGranted,
           isBatteryOptimizationIgnored = isBatteryOptimizationIgnored,

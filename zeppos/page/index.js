@@ -37,7 +37,7 @@ Page(
     clockTimer: null,
 
     build() {
-      console.log('MapyNav Universal Round HUD Page build')
+      console.log('NaviHUD Universal Round HUD Page build')
 
       this.initDisplayManagement()
       this.initSensors()
@@ -141,7 +141,7 @@ Page(
 
     initUI() {
       const layout = this.getLayout()
-      console.log(`MapyNav HUD UI init: ${layout.width}x${layout.height} (scale: ${layout.scale.toFixed(2)})`)
+      console.log(`NaviHUD HUD UI init: ${layout.width}x${layout.height} (scale: ${layout.scale.toFixed(2)})`)
 
       // 1. Giant Turn Icon (centered)
       this.iconWidget = hmUI.createWidget(hmUI.widget.IMG, {
@@ -331,7 +331,7 @@ Page(
     },
 
     onDestroy() {
-      console.log('MapyNav Page onDestroy')
+      console.log('NaviHUD Page onDestroy')
       if (this.clockTimer) {
         clearInterval(this.clockTimer)
         this.clockTimer = null

@@ -62,6 +62,22 @@
   - [x] Google Play Store Listing dokumentáció (`docs/GOOGLE_PLAY_LISTING.md`) leírásokkal, jogosultsági és adatbiztonsági nyilatkozatokkal → ellenőrzés: Útmutató kész
   - [x] GitHub Actions workflow frissítése `.aab` automatikus fordítással és feltöltéssel → ellenőrzés: Workflow frissítve
 
+- [x] 12. Zepp OS Re-submission és Védjegy / Ikon / Preview javítások
+  - [x] `zeppos/app.json` és `zeppos/package.json` frissítése (AppName: NaviHUD, v1.0.1, code: 2) → ellenőrzés: JSON formátum és verzió érvényes
+  - [x] 248×248 px kör alakú app ikon (4px átlátszó safe area) és 240×240 Store ikon előállítása → ellenőrzés: méretek és átlátszó safe areák ellenőrizve
+  - [x] 360×360 px kör alakú RGBA preview képernyőképek (angol és magyar) generálása átlátszó sarkokkal → ellenőrzés: RGBA csatorna és 180r körkivágás ellenőrizve
+  - [x] Zepp OS `.zab` csomagolás és validáció (`npm run build`) → ellenőrzés: `1129966-NaviHUD-1.0.1.zab` sikeresen lefordul
+  - [x] Dokumentáció (`docs/STORE_LISTING.md`) frissítése az új Store adatokkal → ellenőrzés: `docs/STORE_LISTING.md` szinkronban
+  - [x] Git commit és push a main ágra → ellenőrzés: felhasználói jóváhagyás megadva
+
+- [x] 13. Android Átnevezés NaviHUD-ra és Verzióemelés (v1.0.4, code: 7)
+  - [x] Android app_name és service stringek átnevezése NaviHUD-ra → ellenőrzés: strings.xml és values-hu/strings.xml frissítve
+  - [x] Android rootProject.name átnevezése NaviHUD-ra → ellenőrzés: settings.gradle.kts frissítve
+  - [x] Verzióemelés: versionCode = 7, versionName = "1.0.4" → ellenőrzés: build.gradle.kts és aapt2 dump badging ellenőrizve
+  - [x] Launcher mipmap ikonok újragenerálása az új kör sziluettel → ellenőrzés: 5 képernyősűrűség előállítva
+  - [x] Android tesztek és release csomagok (APK és AAB) fordítása → ellenőrzés: tesztek zöldek, bundleRelease lefutott
+  - [x] Dokumentációk (README.md, GOOGLE_PLAY_LISTING.md, PRIVACY_POLICY.md) frissítése → ellenőrzés: szövegek szinkronizálva
+
 ---
 
 ## Review
@@ -72,8 +88,11 @@
 - Google Play Store Listing útmutató: `docs/GOOGLE_PLAY_LISTING.md`
 - Adatvédelmi nyilatkozat: `docs/PRIVACY_POLICY.md`
 - Google Play feltöltési csomag (AAB): `store_assets/google_play/MapyNav-v1.0.0.aab` (12.3 MB)
-- Zepp OS Universal Round ZAB csomag (AppID 1129966): `releases/MapyNav-v1.0.0.zab` (1.15 MB, 30 kerek Amazfit típus, 75 platform)
-- Android APK: `releases/MapyNav-v1.0.0.apk` (18.7 MB)
+- Zepp OS Universal Round ZAB csomag (AppID 1129966, v1.0.1): `releases/NaviHUD-v1.0.1.zab` és `store_assets/1129966-NaviHUD-1.0.1.zab` (960 KB, 30 kerek Amazfit típus, 75 platform)
+- Zepp Store Listing anyagok és leírás: `docs/STORE_LISTING.md`
+- Kör alakú Preview képek (360x360 RGBA): `store_assets/screenshots/en/` és `store_assets/screenshots/hu/`
+- Zepp App Ikon (248x248 circular, 4px safe area): `zeppos/icon.png`, `zeppos/assets/icon.png`, `zeppos/assets/round.r/icon.png`
+- Store Ikon (240x240 circular): `store_assets/app_icon_240x240_circular.png`
 - Biztonsági mentés pont: Git commit `93de18b` és `/home/maci/androidstudio projects/MapyNav-Amazfit_zeppos_balance_backup/`
 
 

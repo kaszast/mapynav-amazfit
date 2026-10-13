@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">MapyNav</string>
+  <string name="app_name">NaviHUD</string>
   <string name="header_subtitle">Amazfit Smartwatch Bridge</string>
 
   <!-- Language Switcher -->
@@ -71,8 +71,8 @@
   <string name="test_stop">Stop (Idle)</string>
 
   <!-- Service Strings -->
-  <string name="service_name">Mapy.cz Notification Listener Service</string>
-  <string name="fgs_channel_name">MapyNav Background Service</string>
+  <string name="service_name">NaviHUD Notification Listener Service</string>
+  <string name="fgs_channel_name">NaviHUD Background Service</string>
   <string name="fgs_channel_desc">Persistent background link with Amazfit watch</string>
   <string name="fgs_running_desc">Background service running • Connected to Amazfit</string>
   <string name="fgs_idle_desc">Standby • Amazfit connection active</string>

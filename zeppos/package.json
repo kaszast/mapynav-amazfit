@@ -1,7 +1,7 @@
 {
-  "name": "mapynav-amazfit",
-  "version": "1.0.0",
-  "description": "Mapy.cz Navigation HUD for Amazfit Smartwatches",
+  "name": "navihud-amazfit",
+  "version": "1.0.1",
+  "description": "Navigation HUD for Amazfit Smartwatches",
   "main": "app.js",
   "scripts": {
     "build": "zeus build",

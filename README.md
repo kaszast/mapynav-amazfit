@@ -1,4 +1,4 @@
-# MapyNav-Amazfit
+# NaviHUD for Amazfit
 
 [![GitHub Release](https://img.shields.io/github/v/release/kaszast/mapynav-amazfit)](https://github.com/kaszast/mapynav-amazfit/releases)
 [![Build & Publish Release](https://github.com/kaszast/mapynav-amazfit/actions/workflows/release.yml/badge.svg)](https://github.com/kaszast/mapynav-amazfit/actions/workflows/release.yml)
@@ -14,7 +14,7 @@
 
 ### Overview
 
-**MapyNav-Amazfit** is a real-time navigation HUD (Heads-Up Display) and haptic notification bridge between the **Mapy.cz** Android navigation app and **Amazfit** smartwatches running **Zepp OS** (2.0+, 3.x, and 4.x).
+**NaviHUD** (formerly MapyNav) is a real-time navigation HUD (Heads-Up Display) and haptic notification bridge between navigation applications (such as Mapy.com / Mapy.cz) on Android and **Amazfit** smartwatches running **Zepp OS** (2.0+, 3.x, and 4.x).
 
 It features **universal round smartwatch support**, automatically scaling layout, fonts, and icons for all circular Amazfit devices (360×360, 416×416, 454×454, 466×466, 480×480 across NXP, ZPS, and Apollo architectures).
 
@@ -138,7 +138,7 @@ Download the latest `MapyNav-v1.0.0.apk` and `MapyNav-v1.0.0.zab` from the [GitH
 
 ### Áttekintés
 
-A **MapyNav-Amazfit** egy valós idejű navigációs HUD (Heads-Up Display) és haptikus értesítő rendszer a **Mapy.cz** Androidos alkalmazás és a **Zepp OS** (2.0+, 3.x, 4.x) rendszert futtató **Amazfit** okosórák között.
+A **NaviHUD** (korábban MapyNav) egy valós idejű navigációs HUD (Heads-Up Display) és haptikus értesítő rendszer a telefonos navigációs alkalmazások (pl. Mapy.com / Mapy.cz) és a **Zepp OS** (2.0+, 3.x, 4.x) rendszert futtató **Amazfit** okosórák között.
 
 A szoftver **univerzális kerek kijelzős támogatással** rendelkezik: automatikusan és arányosan skálázza a felületet, az ikonokat és a betűméreteket minden kerek Amazfit órára (360×360, 416×416, 454×454, 466×466, 480×480 felbontásokon, NXP, ZPS és Apollo processzorcsaládokon).
 
