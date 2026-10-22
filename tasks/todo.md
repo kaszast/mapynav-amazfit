@@ -78,6 +78,12 @@
   - [x] Android tesztek és release csomagok (APK és AAB) fordítása → ellenőrzés: tesztek zöldek, bundleRelease lefutott
   - [x] Dokumentációk (README.md, GOOGLE_PLAY_LISTING.md, PRIVACY_POLICY.md) frissítése → ellenőrzés: szövegek szinkronizálva
 
+- [x] 14. Zepp OS v1.0.2 Re-submission: App Name szinkronizálás és Kapcsolati e-mail
+  - [x] Verzióemelés: Zepp OS v1.0.2 (code: 3) az app.json-ban és package.json-ban → ellenőrzés: érvényes verzió
+  - [x] Új .zab csomag fordítása → ellenőrzés: 1129966-NaviHUD-1.0.2.zab lefordult
+  - [x] Visszajelzési e-mail (kaszast.apps@gmail.com) hozzáadása az angol és magyar leírásokhoz → ellenőrzés: STORE_LISTING.md frissítve
+  - [x] Store leírások és beküldési útmutató pontosítása az elutasítási indokokra → ellenőrzés: kész
+
 ---
 
 ## Review

@@ -45,7 +45,7 @@ HOW TO USE:
 2. Install the free companion NaviHUD mini app on your Amazfit smartwatch via the Zepp App Store.
 3. Start navigation in your navigation app — your watch HUD activates automatically!
 
-Feedback, suggestions, or support: kaszast@gmail.com
+Feedback, suggestions, or support: kaszast.apps@gmail.com
 Source code & documentation: https://github.com/kaszast/mapynav-amazfit
 ```
 

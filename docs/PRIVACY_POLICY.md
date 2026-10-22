@@ -72,5 +72,5 @@ If this Privacy Policy is updated, the revised version will be published on the 
 For any inquiries or questions regarding this Privacy Policy, please contact:
 
 * **Developer:** kaszast
-* **Email:** kaszast@gmail.com
+* **Email:** kaszast.apps@gmail.com
 * **Project Repository:** [https://github.com/kaszast/mapynav-amazfit](https://github.com/kaszast/mapynav-amazfit)

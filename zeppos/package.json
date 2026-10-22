@@ -1,6 +1,6 @@
 {
   "name": "navihud-amazfit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Navigation HUD for Amazfit Smartwatches",
   "main": "app.js",
   "scripts": {
